@@ -1,0 +1,86 @@
+/* Add this to the top of your CSS file */
+html {
+    scroll-behavior: smooth; /* The magic for smooth scrolling */
+    scroll-padding-top: 80px; /* Prevents content from hiding behind the fixed navbar */
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* ... (keep your existing .navbar and .navbar.scrolled styles) ... */
+.navbar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ... (keep nav-logo, nav-menu, nav-item styles) ... */
+.nav-logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    /* justify-content:left; */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 5rem;
+    gap: 1.5rem; 
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+/* Style for the active link */
+.nav-link.active {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+/* Basic section styling for the demo */
+section {
+    height: 100vh; /* Make each section fill the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/* Different background colors for contrast */
+#home { background-color: #34495e; color: white; }
+#about { background-color: #e74c3c; color: white; }
+#services { background-color: #f1c40f; color: #333; }
+#contact { background-color: #9b59b6; color: white; }
